@@ -1,6 +1,3 @@
-/**
- * 
- */
 package com.Spring.FirstSpringDeskstopApplication;
 
 import org.springframework.context.ApplicationContext;
@@ -19,6 +16,7 @@ public class MainClassofSpring {
 
      ApplicationContext context =new ClassPathXmlApplicationContext("spring-configuration.xml"); 
      Student st=(Student) context.getBean("studentbean");
-     System.out.println("name="+st.getName()+"\nAddress="+st.getAddress()+"\n rollno="+st.getRollno()+"\n percentage="+st.getPer());
+     Address ad=(Address) context.getBean("addressbean");
+     System.out.println("name="+st.getName()+"\nAddress=["+ad.getCity()+"\t"+ad.getState()+" "+ad.getCountry()+"\t"+ad.getPin()+"]"+"\n rollno="+st.getRollno()+"\n percentage="+st.getPer());
 	}
 }

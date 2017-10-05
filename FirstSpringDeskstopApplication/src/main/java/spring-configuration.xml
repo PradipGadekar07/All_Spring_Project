@@ -8,6 +8,13 @@
 		<property name="rollno" value="7" />
 		<property name="name" value="MahendraSingh Dhoni" />
 		<property name="per" value="77" />
-		<property name="address" value="Ranchi,India" />
+		<property name="address" ref="addressbean" />
+	</bean>
+	
+	<bean id="addressbean" class="com.Spring.FirstSpringDeskstopApplication.Address">
+		<property name="city" value="ranchi" />
+		<property name="state" value="Jharkhand" />
+		<property name="country" value="India" />
+		<property name="pin" value="413304" />
 	</bean>
 </beans>
