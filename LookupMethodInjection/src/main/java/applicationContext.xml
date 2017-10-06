@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 
+    <bean id="CricketTeam" class="com.Spring.LookupMethodInjection.CricketTeam">
+        <lookup-method name="BeingCaptain" bean="MSDhoni"/>
+        <lookup-method name="AsCaptain" bean="Captain"/>
+    </bean>
+     
+    <bean id="MSDhoni" class="com.Spring.LookupMethodInjection.MSDhoni" scope="prototype"/>
+     
+    <bean id="Captain" class="com.Spring.LookupMethodInjection.MSDhoni" scope="prototype">
+        <property name="isGoodCaptain" value="true"/>
+    </bean>
+ 
+</beans>
