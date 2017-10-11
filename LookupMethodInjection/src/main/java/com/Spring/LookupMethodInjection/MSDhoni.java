@@ -9,7 +9,7 @@ import java.util.concurrent.atomic.AtomicLong;
  */
 public class MSDhoni {
 	private static AtomicLong count = new AtomicLong(0); 
-    private boolean isGoodCaptain=true;
+    private boolean isGoodCaptain;
 	
 	public MSDhoni() {
 	count.incrementAndGet();	

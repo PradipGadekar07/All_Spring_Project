@@ -4,8 +4,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
 
-	<bean id="studentbean" class="com.Spring.FirstSpringDeskstopApplication.Student" scope="singleton">
-		<property name="rollno" value="7" />
+	<bean id="studentbean" class="com.Spring.FirstSpringDeskstopApplication.Student">
+		<property name="rollno" value="${jno}" />
 		<property name="name" value="MahendraSingh Dhoni" />
 		<property name="per" value="77" />
 		<property name="address" ref="addressbean" />
